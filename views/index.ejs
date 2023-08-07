@@ -10,12 +10,17 @@
     
     <!-- Mostrar los posts aquí -->
     <ul>
-        <% users.forEach(function(user){ %>
-          <%- include('src/posts', {user: user}); %>
-        <% }); %>
+        <% posts.forEach(function(post){ %>
+          <li><%= post.title %></li>
+          <li><%= post.description %></li>
+          <li><%= post.author %></li>
+          <br>
+        <% }); %> 
       </ul>
 
 
-    <script src="../src/posts.js"></script>
+    <script src="../src/posts.js">
+      
+    </script>
 </body>
 </html>
